@@ -1,0 +1,63 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="text_very_large">30sp</dimen>
+    <dimen name="text_large">18sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_small">14sp</dimen>
+    <dimen name="text_very_small">12sp</dimen>
+
+    <dimen name="button_width">250dp</dimen>
+    <dimen name="button_height">45dp</dimen>
+    <dimen name="button_padding">5dp</dimen>
+
+    <dimen name="list_item_text_padding">10dp</dimen>
+
+    <dimen name="scrollbar_size">10dp</dimen>
+
+    <!-- Login Screen -->
+    <dimen name="edit_text_height">45dp</dimen>
+    <dimen name="edit_text_mar_right">25dp</dimen>
+    <dimen name="edit_text_mar_top">25dp</dimen>
+    <dimen name="edit_text_mar_left">25dp</dimen>
+    <dimen name="login_mar_top">30dp</dimen>
+    <dimen name="login_mar_bottom">30dp</dimen>
+
+    <!-- Sign up Screen -->
+    <dimen name="scrollview_mar_top">20dp</dimen>
+    <dimen name="button_mar_top">20dp</dimen>
+    <dimen name="button_mar_bottom">20dp</dimen>
+
+    <!-- Chat Details Screen -->
+    <dimen name="chat_width">210dp</dimen>
+    <dimen name="chat_imageview_width">50dp</dimen>
+    <dimen name="chat_imageview_height">50dp</dimen>
+
+    <!-- Profile Screen -->
+    <dimen name="view_divider_height">5dp</dimen>
+
+
+    <!-- Discover tab -->
+    <dimen name="title_height">56dp</dimen>
+    <dimen name="re_notification_width">50dp</dimen>
+    <dimen name="ed_search_height">30dp</dimen>
+
+    <!-- Dialog -->
+    <dimen name="dialog_min_width">200dp</dimen>
+    <dimen name="dialog_min_height">150dp</dimen>
+
+    <!-- View Pager -->
+    <dimen name="view_pager_people_height">100dp</dimen>
+    <dimen name="view_pager_event_height">170dp</dimen>
+
+    <!-- View Pager Circle indicator -->
+    <dimen name="circle_small">10dp</dimen>
+    <dimen name="circle_big">15dp</dimen>
+
+
+
+
+</resources>

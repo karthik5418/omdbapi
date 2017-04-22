@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_no_network"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_no_internet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp"
+            android:src="@drawable/im_no_internet" />
+
+        <com.karthik.demo.view.TextViewCustom
+            android:id="@+id/tv_no_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/network_error_short"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_medium" />
+
+
+        <com.karthik.demo.view.TextViewCustom
+            android:id="@+id/tv_no_network_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/network_error_empty"
+            android:textColor="@color/grey_dark_text"
+            android:textSize="@dimen/text_medium" />
+
+        <com.karthik.demo.view.ButtonCustom
+            android:id="@+id/bt_no_network_retry"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/re_root"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bt_curved_selector_red"
+            android:gravity="center"
+            android:text="@string/retry"
+
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_very_small"
+            android:textStyle="normal"
+            android:typeface="normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_timeout_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_internet_timeout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp"
+            android:src="@drawable/im_no_internet" />
+
+        <com.karthik.demo.view.TextViewCustom
+            android:id="@+id/tv_network_timeout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/network_time_out_error_desc"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_medium" />
+
+        <com.karthik.demo.view.ButtonCustom
+            android:id="@+id/bt_network_timeout_retry"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/re_root"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bt_curved_selector_red"
+            android:gravity="center"
+            android:text="@string/retry"
+
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_very_small"
+            android:textStyle="normal"
+            android:typeface="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_no_result_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/iv_no_results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_error" />
+
+        <com.karthik.demo.view.TextViewCustom
+            android:id="@+id/tv_no_result_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/no_results_error"
+            android:textColor="@color/grey_dark_text"
+            android:textSize="@dimen/text_medium" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_server_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_server_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_error" />
+
+        <com.karthik.demo.view.TextViewCustom
+            android:id="@+id/tv_server_short"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:padding="5dp"
+            android:text="@string/server_error_short"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_medium" />
+
+
+        <com.karthik.demo.view.TextViewCustom
+            android:id="@+id/tv_server_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/server_error_desc"
+            android:textColor="@color/grey_dark_text"
+            android:textSize="@dimen/text_medium" />
+
+        <com.karthik.demo.view.ButtonCustom
+            android:id="@+id/bt_server_retry"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/re_root"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bt_curved_selector_red"
+            android:gravity="center"
+            android:text="@string/retry"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_very_small"
+            android:textStyle="normal"
+            android:typeface="normal" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

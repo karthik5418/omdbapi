@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_snackbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/re_title"
+        android:background="@color/grey_dark_text"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:visibility="gone">
+
+
+        <com.karthik.demo.view.TextViewCustom
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/tv_try_again"
+            android:gravity="start"
+            android:padding="5dp"
+            android:text="Hello"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"
+            android:textStyle="normal"
+            android:typeface="normal" />
+
+        <com.karthik.demo.view.TextViewCustom
+            android:id="@+id/tv_try_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/retry"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_small"
+            android:textStyle="normal"
+            android:typeface="normal"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

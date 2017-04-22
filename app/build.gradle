@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    // this is for making different package for layout file based on their purpose.
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res',
+                    'src/main/res/layout/activity',
+                    'src/main/res/layout/fragment',
+                    'src/main/res/layout/dialog',
+                    'src/main/res/layout/header',
+                    'src/main/res/layout/include',
+                    'src/main/res/layout/item'
+            ]
+        }
+    }
+    defaultConfig {
+        applicationId "com.karthik.demo"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName '1.0'
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true // removes unused code (dead code)
+            //shrinkResources true // This is default, cannot be disabled.It depends on 'minifyEnabled'. Removes unused resource file (drawables) from drawable/ folder , that 'minifyEnabled' flagged as unused.
+            //useProguard true // obfuscate or optimizes apk file in release mode
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false // removes unused code (dead code)
+            //shrinkResources true // This is default, cannot be disabled.It depends on 'minifyEnabled'. Removes unused resource file (drawables) from drawable/ folder , that 'minifyEnabled' flagged as unused.
+            //useProguard false
+            // obfuscate or optimizes apk file in (we don't want this feature in 'debug' , hence made it 'false')
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    testCompile 'junit:junit:4.12'
+
+
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+
+    // AppCompact
+    compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+
+    //Support library
+    compile "com.android.support:design:$rootProject.ext.supportLibraryVersion"
+
+    //CardView
+    compile "com.android.support:cardview-v7:$rootProject.ext.supportLibraryVersion"
+
+    //Retrofit 2 : Networking library
+    // retrofit itself
+    compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+
+    // for logging server response
+    compile "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.retrofitLoggingIntercepterVersion"
+
+    // adapter for combining rxAndroid and retrofit
+    compile "com.squareup.retrofit2:adapter-rxjava:$rootProject.ext.retrofitVersion"
+
+    //Gson
+    // Gson itself
+    compile "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+    // retrofit gson converte
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+
+    // RxAndroid
+    compile "io.reactivex:rxandroid:$rootProject.ext.rxAndroidVersion"
+
+    //RxJava
+    compile "io.reactivex:rxjava:$rootProject.ext.rxJavaVersion"
+
+    // Picasso : Image loading.
+    compile "com.squareup.picasso:picasso:$rootProject.ext.picassoVersion"
+
+    // Permiso : for runtime permission. A simplified library
+    compile "com.greysonparrelli.permiso:permiso:$rootProject.ext.permisoVersion"
+
+    compile project(path: ':linkedin-sdk')
+}

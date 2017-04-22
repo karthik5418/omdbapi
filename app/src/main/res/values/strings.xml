@@ -1,0 +1,214 @@
+<resources>
+    <string name="app_name">Demo App</string>
+
+    <!-- Menu -->
+    <string name="action_settings">Settings</string>
+
+
+    <!-- Default values -->
+    <string name="default_relationship_manager_email">priyal@marriager.com</string>
+    <string name="default_relationship_manager_phone">+91 9820433910</string>
+
+
+    <!-- Confirmation Text -->
+    <string name="logout_confirm">Are you sure want to logout ?</string>
+    <string name="unsaved_album">Are you sure want to go back. This album will not be saved.</string>
+    <string name="unsaved_faq">Do you want to save the changes made.</string>
+    <string name="unsaved_venues">Do you want to save the changes made.</string>
+    <string name="confirm_delete_video">Do you sure want to this video.</string>
+    <string name="confirm_featured_image">Your category has been added successfully, do you want to add an featured image</string>
+    <string name="user_not_verified">Please verify your account by logging in at http://www.marriager.com/user/login/</string>
+    <string name="confirm_app_exit">Do you want to exit?</string>
+
+
+    <!-- Success text -->
+    <string name="password_changed">Password has been changed successfully</string>
+
+    <!-- Permission -->
+    <string name="no_storage_permission">Open settings, then tap permissions and turn on Storage</string>
+
+    <!-- Imageview transition key -->
+    <string name="image_key">send_image</string>
+
+    <!-- Title Text -->
+    <string name="login">LOGIN</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="account_setting">Account Setting</string>
+    <string name="manage_review">Manage Review</string>
+    <string name="notifications">Notifications</string>
+    <string name="enquiry">Enquiry</string>
+    <string name="my_marriager_gallery">MY MARRIAGER GALLERY</string>
+    <string name="analytics">ANALYTICS</string>
+    <string name="albums">ALBUMS</string>
+    <string name="edit_albums">EDIT ALBUM</string>
+    <string name="service">SERVICES</string>
+    <string name="videos">VIDEOS</string>
+    <string name="create_album">Create New Album</string>
+    <string name="add_video">Add New Video</string>
+    <string name="select_images">Select photos</string>
+    <string name="edit_tags_description">EDIT TAGS/DESCRIPTION </string>
+    <string name="add_title_tags"><![CDATA[ADD TITLE & TAGS]]></string>
+    <string name="faq">FAQ </string>
+    <string name="change_password">Change Password</string>
+    <string name="venues">VENUES</string>
+    <string name="category_name">JEWELLERY</string>
+    <string name="company_info">Company Info</string>
+    <string name="movies">Movies</string>
+
+
+    <!-- Hint Text -->
+    <string name="email">Email ID</string>
+    <string name="password">Password</string>
+    <string name="reply_to_review">Reply to review</string>
+    <string name="enter_notes">Enter notes here...</string>
+    <string name="start_date">Start Date :</string>
+    <string name="end_date">End Date :</string>
+    <string name="category">Select category</string>
+    <string name="venue_type">Venue Type</string>
+    <string name="venue_name">Venue Name</string>
+    <string name="seated">Seated</string>
+    <string name="floating">Floating</string>
+    <string name="minimum_price">Minimum price</string>
+    <string name="maximum_price">Maximum price</string>
+    <string name="brand_name">Brand name</string>
+    <string name="brand_name_info">(Brand Name cannot be edited)</string>
+    <string name="registered_company_name">Registered Company Name</string>
+    <string name="registered_company_name_info">(Registered Company Name cannot be edited)</string>
+    <string name="official_email">Official Email Id</string>
+    <string name="official_email_info">(Not mandatory, if you enter this email you will be required to verify it)</string>
+    <string name="land_line_number">Land Number</string>
+    <string name="about_company">About Company</string>
+    <string name="website_link">Website link</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="twitter">Twitter</string>
+    <string name="pinterest">Pinterest</string>
+    <string name="linked_in">LinkedIn</string>
+    <string name="youtube">Youtube</string>
+    <string name="vimeo">Vimeo</string>
+    <string name="full_name">Full Name</string>
+    <string name="number">Phone Number</string>
+    <string name="full_name_info">(Should be same as on pan card)</string>
+    <string name="personal_email_verified">(Your email has been verified)</string>
+    <string name="personal_email_not_verified">(Please enter a valid email, link to verify email will be sent)</string>
+    <string name="personal_mobile_info"><![CDATA[(Please enter a valid mobile number & enter otp once received)]]></string>
+
+
+    <string name="login_facebook">Login via facebook</string>
+    <string name="retry">TRY AGAIN</string>
+    <string name="submit">Submit</string>
+    <string name="done">Done</string>
+    <string name="first_name">First name<su>*</su></string>
+    <string name="last_name">Last name<su>*</su></string>
+    <string name="location">Location <su>*</su></string>
+    <string name="current_pasword">Current Password</string>
+    <string name="new_pasword">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="next">Next</string>
+    <string name="forgot_pass_info">Please provide your registered email id to reset password</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="exit">Exit</string>
+    <string name="home">Home</string>
+    <string name="help">Help</string>
+    <string name="share_app">Share app</string>
+    <string name="logout">Logout</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="edit">Edit</string>
+    <string name="help_info">For any help, please contact your business manager</string>
+    <string name="rate_us">If you enjoy using ProcureMeet,
+would you mind taking a moment to rate it? Thank You for
+ your support</string>
+    <string name="docs">Docs</string>
+    <string name="add_new_albums">+ Add New Album</string>
+    <string name="add_new_videos">+ Add New Video</string>
+    <string name="add_new_category">+ Add New Category</string>
+    <string name="add_venues">Add Venues</string>
+    <string name="add_question">Add A Question?</string>
+    <string name="add_new_images">+ Add Images</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="tags">Tags</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="ok">OK</string>
+    <string name="skip">SKIP</string>
+    <string name="cover_photo">Cover Photo</string>
+    <string name="write_question">Enter A Question</string>
+    <string name="write_answer">Enter A Answer</string>
+    <string name="video_link">Video link</string>
+    <string name="delete">Delete</string>
+    <string name="add_another_address">Add another address</string>
+    <string name="add_mobile">Add Mobile</string>
+    <string name="resend_verification">RESEND VERIFICATION LINK</string>
+    <string name="social_media_link">Social media link</string>
+    <string name="wed_site_link">Website link</string>
+    <string name="dismiss">Dismiss</string>
+
+
+    <!-- Error Text -->
+    <string name="empty_current_password_error">Please enter your current password</string>
+    <string name="empty_new_password_error">Please enter your new password</string>
+    <string name="empty_confirm_password_error">Please enter your confirm password</string>
+    <string name="general_empty_error">Please enter all required data to proceed.</string>
+    <string name="empty_email_error">Please enter your email ID</string>
+    <string name="empty_password_error">Please enter your password</string>
+    <string name="network_error_short">Failed to connect</string>
+    <string name="network_error_desc">Your network doesn’t seem to be working properly</string>
+    <string name="network_error_empty">Your network doesn’t seem to be working properly. Please tap to retry.</string>
+    <string name="general_error">Something went wrong . Please try again later</string>
+    <string name="server_error_short">Oops!</string>
+    <string name="server_error_desc">Something went wrong. Please try again later.</string>
+    <string name="network_time_out_error_short">Timed Out</string>
+    <string name="network_time_out_error_desc">Connection time out. Please try again later.</string>
+    <string name="invalid_email_error">Please enter a valid email ID.</string>
+    <string name="empty_start_date_error">Please select start date first.</string>
+    <string name="empty_end_date_error">Please select end date first.</string>
+    <string name="no_results_error">No results found.</string>
+    <string name="password_mismatched_error">Password do not match.</string>
+    <string name="empty_album">Please enter album name.</string>
+    <string name="empty_video">Please enter video link.</string>
+    <string name="empty_question">Please enter your question.</string>
+    <string name="empty_answer">Please enter your answer.</string>
+    <string name="empty_venue_name">Please enter venue name.</string>
+    <string name="empty_seated">Please enter seated.</string>
+    <string name="empty_floating">Please enter floating.</string>
+    <string name="empty_minimum_price">Please enter minimum price.</string>
+    <string name="empty_maximum_price">Please enter maximum price.</string>
+    <string name="empty_faq">Any common questions your customers ask? \n Add them here so that they already know the answer</string>
+
+
+    <!-- Loading Message-->
+
+
+    <!-- Lorem ipsum -->
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet</string>
+    <string name="lorem_ipsum1">Lorem ipsum dolor sit amet, vix ei iudico munere appetere. Nec ne wisi eleifend, usu clita delectus cu, sit denique scriptorem liberavisse ne. Et tantas graeci invidunt duo, eu eam natum impedit dolores. Ei vix brute nostro hendrerit, vis at feugiat albucius vituperatoribus. Ei unum novum qui, in admodum singulis qui. Vim ut mutat discere ceteros.Lorem ipsum dolor sit amet, vix ei iudico munere appetere. Nec ne wisi eleifend, usu clita delectus cu, sit denique scriptorem liberavisse ne. Et tantas graeci invidunt duo, eu eam natum impedit dolores. Ei vix brute nostro hendrerit, vis at feugiat albucius vituperatoribus. Ei unum novum qui, in admodum singulis qui. Vim ut mutat discere ceteros</string>
+    <string name="lorem_ipsum2">Lorem ipsum dolor sit amet, vix ei iudico munere appetere. Nec ne wisi eleifend, usu clita delectus cu</string>
+    <!-- Required for dynamic permission API > 21-->
+    <string name="perm_grp_lab_location">Wanted to access your location</string>
+    <string name="perm_grp_desc_location">To discover people and events around you, please turn on your locations</string>
+    <string name="perm_grp_flags_location">location information</string>
+
+    <string name="ans1"></string>
+    <string name="ans2"></string>
+    <string name="ans3"></string>
+
+
+    <!-- Facebook-->
+    <string name="facebook_app_id">592898794227584</string>
+
+    <!-- Bottom sheet options-->
+
+    <string name="sheet_notes">Notes</string>
+    <string name="sheet_gallery">Gallery</string>
+    <string name="sheet_documents">Documents</string>
+    <string name="sheet_camera">Camera</string>
+    <string name="sheet_phone_gallery">Phone Gallery</string>
+    <string name="sheet_my_marriager_gallery">My Marriager Gallery</string>
+    <string name="sheet_create_package">Create Package</string>
+
+
+</resources>

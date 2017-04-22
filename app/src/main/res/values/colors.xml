@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#e24b4a</color>
+    <color name="colorPrimary">#e24b4a</color>
+    <color name="colorAccent">#e24b4a</color>
+    <color name="grey_light">#6e798a</color>
+    <color name="grey_normal_hint">#acacac</color>
+    <color name="grey_dark_text">#383838</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="tint">#80000000</color>
+    <color name="dark_tint">#99000000</color>
+    <color name="grey_border">#efefef</color>
+    <color name="blue_dark">#006399</color>
+
+    <color name="end_color">#f05d4a</color>
+    <color name="start_color">#ec414e</color>
+
+    <color name="grey_background_dark">#efefef</color>
+    <color name="grey_background_light">#f7f7f7</color>
+
+
+    <color name="notification_red">#c93d3c</color>
+    <color name="notification_bluish_grey">#6e798a</color>
+    <color name="transparent">#99000000</color>
+
+    <color name="half_white">#80ffffff</color>
+    <color name="dashboard_grey">#b3b3b3</color>
+
+
+
+</resources>
+
+

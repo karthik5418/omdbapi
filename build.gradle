@@ -1,0 +1,68 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// Define versions in a single place
+ext {
+
+    // Sdk and tools
+    minSdkVersion = 16
+    targetSdkVersion = 25
+    //compileSdkVersion = 24
+    compileSdkVersion = 25
+    //buildToolsVersion = '24.0.2'
+    buildToolsVersion = '25.0.2'
+
+    // App dependencies
+    //supportLibraryVersion = '24.2.0'
+    supportLibraryVersion = '25.0.1'
+    cardViewVersion = '23.3.0'
+    retrofitVersion = '2.0.2'
+    gsonVersion = '2.6.2'
+    //retrofitGsonConverterVersion= '2.0.2'
+    retrofitLoggingIntercepterVersion = '3.3.1'
+    rxAndroidVersion = '1.2.1'
+    rxJavaVersion = '1.1.6'
+    //rxJavaRetrofitAdapterVersion= '2.0.2'
+    facebookVersion = '4.8.2'
+    multiDexVersion = '1.0.1'
+    picassoVersion = '2.5.2'
+    permisoVersion = '0.3.0'
+    daggerVersion = '2.7'
+    daggerComplieTimeErrorVersion = '10.0-b28'
+    gmsVersion = '9.0.0'
+    oneSignalVersion = '3.+@aar'
+    photoViewVersion = '1.3.1'
+    cropImageVersion = '2.3.+'
+
+    // Tests
+    junitVersion = '4.12'
+    mockitoVersion = '1.10.19'
+    powerMockito = '1.6.2'
+    hamcrestVersion = '1.3'
+    runnerVersion = '0.5'
+    rulesVersion = '0.5'
+    espressoVersion = '2.2.2'
+    uiAuomatorVersion = '2.1.1'
+
+}
