@@ -33,7 +33,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.karthik.demo.R;
-import com.karthik.demo.app.omdb.model.OmdbModel;
+import com.karthik.demo.app.omdb.model.FeedModel;
 import com.karthik.demo.listener.OnTryAgainListener;
 import com.karthik.demo.util.CommonFunction;
 import com.karthik.demo.util.ErrorUtil;
@@ -70,8 +70,8 @@ public class OMDBActivity extends AppCompatActivity implements OMDB_MVP.View, Vi
 
     // List, Adapter
     private OMDBAdapter adapter;
-    private List<OmdbModel> list;
-    private OmdbModel model;
+    private List<FeedModel.Response> list;
+    private FeedModel.Response model;
 
     // Parent type
     private int mParentType;
@@ -106,7 +106,8 @@ public class OMDBActivity extends AppCompatActivity implements OMDB_MVP.View, Vi
         mWidth = metrics.widthPixels;
 
         // Operations on views
-        tvTitle.setText(getString(R.string.movies));
+        tvTitle.setText("Feeds");
+        tvTitle.setSelected(true);
         rvOmdb.setLayoutManager(new LinearLayoutManager(this));
 
         list = new ArrayList<>();
@@ -125,6 +126,9 @@ public class OMDBActivity extends AppCompatActivity implements OMDB_MVP.View, Vi
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerType.setAdapter(dataAdapter);
         spinnerType.setOnItemSelectedListener(this);
+
+
+        mPresenter.loadMovies(null);
     }
 
 
@@ -140,7 +144,7 @@ public class OMDBActivity extends AppCompatActivity implements OMDB_MVP.View, Vi
                 CommonFunction.hideKeyboard(this, tvSearch);
                 ErrorUtil.hideInsetError(rvOmdb, inError);
                 mPresenter.setSearchString(etSearch.getText().toString().trim());
-                mPresenter.loadMovies(null);
+
                 break;
         }
     }
@@ -189,8 +193,7 @@ public class OMDBActivity extends AppCompatActivity implements OMDB_MVP.View, Vi
 
     @Override
     public void showSuccess(Object object) {
-        model = (OmdbModel) object;
-        list.add(model);
+        list = (List<FeedModel.Response>) object;
         adapter = new OMDBAdapter(this, list, mHeight);
         rvOmdb.setAdapter(adapter);
     }

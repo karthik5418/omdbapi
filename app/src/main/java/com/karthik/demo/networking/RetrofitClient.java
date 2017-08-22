@@ -14,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
 
 
-    public static final String DOMAIN = "http://www.omdbapi.com/";
+    public static final String DOMAIN = "http://www.techmorphosis-development.com/procure_meet/mobile1.0/web/";
 
 
     public static Retrofit retrofit;

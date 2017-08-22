@@ -4,7 +4,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/grey_background_dark"
+    android:background="@color/grey_dark"
     android:paddingBottom="10dp"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
@@ -47,8 +47,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="2dp"
-                    android:text="Movie Title"
-                    android:textColor="@color/grey_dark_text"
+                    android:text="Name"
+
                     android:textSize="@dimen/text_medium"
                     android:textStyle="bold"
                     android:typeface="normal" />
@@ -61,10 +61,10 @@
                     android:layout_marginRight="5dp"
                     android:padding="2dp"
                     android:text="Genre"
-                    android:textColor="@color/grey_dark_text"
                     android:textSize="@dimen/text_medium"
                     android:textStyle="normal"
-                    android:typeface="normal" />
+                    android:typeface="normal"
+                    android:visibility="gone" />
 
                 <com.karthik.demo.view.TextViewCustom
                     android:id="@+id/tv_rating"
@@ -74,10 +74,10 @@
                     android:layout_marginRight="5dp"
                     android:padding="2dp"
                     android:text="Rating"
-                    android:textColor="@color/grey_dark_text"
                     android:textSize="@dimen/text_medium"
                     android:textStyle="normal"
-                    android:typeface="normal" />
+                    android:typeface="normal"
+                    android:visibility="gone" />
 
                 <com.karthik.demo.view.TextViewCustom
                     android:id="@+id/tv_release_date"
@@ -87,10 +87,10 @@
                     android:layout_marginRight="5dp"
                     android:padding="2dp"
                     android:text="Genre"
-                    android:textColor="@color/grey_dark_text"
                     android:textSize="@dimen/text_medium"
                     android:textStyle="normal"
-                    android:typeface="normal" />
+                    android:typeface="normal"
+                    android:visibility="gone" />
 
                 <com.karthik.demo.view.TextViewCustom
                     android:id="@+id/tv_plot"
@@ -102,10 +102,10 @@
                     android:gravity="start"
                     android:padding="5dp"
                     android:text="gcdcfd"
-                    android:textColor="@color/grey_dark_text"
                     android:textSize="@dimen/text_small"
                     android:textStyle="normal"
-                    android:typeface="normal" />
+                    android:typeface="normal"
+                    android:visibility="gone" />
 
             </RelativeLayout>
 

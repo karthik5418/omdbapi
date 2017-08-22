@@ -6,7 +6,7 @@ package com.karthik.demo.constants;
 
 public class ServerStatus {
 
-    public static final String SUCCESS = "True";
-    public static final String FAILURE = "False";
-    public static final String NO_RESULT = "False";
+    public static final String SUCCESS = "Success";
+    public static final String FAILURE = "Failure";
+    public static final String NO_RESULT = "No Result";
 }

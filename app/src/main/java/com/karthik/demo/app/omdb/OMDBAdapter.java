@@ -11,7 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.karthik.demo.R;
-import com.karthik.demo.app.omdb.model.OmdbModel;
+import com.karthik.demo.app.omdb.model.FeedModel;
 import com.karthik.demo.listener.ItemClickListener;
 import com.karthik.demo.util.CommonFunction;
 
@@ -22,17 +22,17 @@ import java.util.List;
  */
 public class OMDBAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private static final String TAG = "OMDBAdapter";
+    private static final String TAG = "FeedAdapter";
 
-    private List<OmdbModel> list;
-    OmdbModel model;
+    private List<FeedModel.Response> list;
+    FeedModel.Response model;
     private Context context;
     private ItemClickListener itemClickListener;
     private float deviceHeight;
 
     private RelativeLayout.LayoutParams params;
 
-    public OMDBAdapter(Context context, List<OmdbModel> list, float height) {
+    public OMDBAdapter(Context context, List<FeedModel.Response> list, float height) {
         this.list = list;
         this.context = context;
         deviceHeight = height;
@@ -52,20 +52,8 @@ public class OMDBAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         model = list.get(position);
         OmdbViewHolder viewHolder = (OmdbViewHolder) holder;
-        CommonFunction.getImage(model.getPoster(), viewHolder.ivMoviePoster, R.drawable.im_post_default);
-        viewHolder.tvMovieTitle.setText(model.getTitle());
-        viewHolder.tvGenre.setText(model.getGenre());
-
-        if (model.getReleased() != null) {
-            viewHolder.tvReleaseDate.setText(model.getReleased());
-        }
-
-        if (model.getPlot()!=null) {
-            viewHolder.tvPolt.setText(model.getPlot());
-        }
-        if (model.getRatings() != null) {
-            viewHolder.tvRating.setText("IMD" + "\n" + model.getRatings().get(0).getValue());
-        }
+        CommonFunction.getImage(model.getPhotoUrl(), viewHolder.ivMoviePoster, R.drawable.im_post_default);
+        viewHolder.tvMovieTitle.setText(model.getFirstName() + " " + model.getLastName());
 
 
     }

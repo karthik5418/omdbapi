@@ -28,7 +28,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true // removes unused code (dead code)
+            minifyEnabled false // removes unused code (dead code)
             //shrinkResources true // This is default, cannot be disabled.It depends on 'minifyEnabled'. Removes unused resource file (drawables) from drawable/ folder , that 'minifyEnabled' flagged as unused.
             //useProguard true // obfuscate or optimizes apk file in release mode
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -102,4 +102,6 @@ dependencies {
     compile "com.greysonparrelli.permiso:permiso:$rootProject.ext.permisoVersion"
 
     compile project(path: ':linkedin-sdk')
+
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
 }

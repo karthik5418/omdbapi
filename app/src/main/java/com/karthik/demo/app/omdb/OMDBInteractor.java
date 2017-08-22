@@ -1,7 +1,7 @@
 package com.karthik.demo.app.omdb;
 
 import com.karthik.demo.MyApp;
-import com.karthik.demo.app.omdb.model.OmdbModel;
+import com.karthik.demo.app.omdb.model.FeedModel;
 import com.karthik.demo.constants.ServerStatus;
 import com.karthik.demo.networking.RetrofitService;
 import com.karthik.demo.util.CommonFunction;
@@ -9,6 +9,7 @@ import com.karthik.demo.util.CommonFunction;
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
+import java.util.HashMap;
 
 import rx.Observable;
 import rx.Subscriber;
@@ -41,9 +42,9 @@ public class OMDBInteractor implements OMDB_MVP.Interactor {
     @Override
     public void loadingMovies(Object object) {
 
-        if (!mSearchString.equals("")) {
+
             callWebService();
-        }
+
 
     }
 
@@ -73,11 +74,20 @@ public class OMDBInteractor implements OMDB_MVP.Interactor {
 
     private void callWebService() {
 
-        Observable<OmdbModel> observable = retrofitService.loadMovies(mSearchString, "short", mSearchType);
+        HashMap<String, String> map = new HashMap<>();
+        map.put("os", "Android");
+        map.put("make", "Moto");
+        map.put("model", "G4 plus");
+        map.put("userId", "97");
+        map.put("token", "0e16ad8d450d6b943160cd2ffb79f4ee");
+        map.put("currentListSize", "0");
+
+
+        Observable<FeedModel> observable = retrofitService.getFeedList(map);
 
         subscriptionMovies = observable.observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
-                .subscribe(new Subscriber<OmdbModel>() {
+                .subscribe(new Subscriber<FeedModel>() {
                     @Override
                     public void onCompleted() {
                         CommonFunction.printDebug(TAG, "completed");
@@ -95,13 +105,13 @@ public class OMDBInteractor implements OMDB_MVP.Interactor {
                     }
 
                     @Override
-                    public void onNext(OmdbModel model) {
-                        if (model.getResponse().equalsIgnoreCase(ServerStatus.SUCCESS)) {
-                            mPresenter.onSuccess(model);
+                    public void onNext(FeedModel model) {
+                        if (model.getStatus().equals(ServerStatus.SUCCESS)) {
+                            mPresenter.onSuccess(model.getResponse());
                             return;
                         }
-                        if (model.getResponse().equalsIgnoreCase(ServerStatus.NO_RESULT)) {
-                            mPresenter.onNoResult(model.getError());
+                        if (model.getStatus().equals(ServerStatus.FAILURE)) {
+                            mPresenter.onFailure(model.getMessage());
                             return;
                         }
                         mPresenter.onServerError();
