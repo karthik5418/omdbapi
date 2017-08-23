@@ -26,7 +26,6 @@ public class OMDBInteractor implements OMDB_MVP.Interactor {
     private static final String TAG = "Login";
 
     private OMDB_MVP.PresenterForInteractor mPresenter;
-
     public RetrofitService retrofitService;
 
     // Subscription

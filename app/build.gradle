@@ -103,5 +103,8 @@ dependencies {
 
     compile project(path: ':linkedin-sdk')
 
-    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile "com.android.support.constraint:constraint-layout:$rootProject.ext.constraintLayoutVersion"
+
+    // location
+    compile "com.google.android.gms:play-services-location:$rootProject.ext.playServicesVersion"
 }

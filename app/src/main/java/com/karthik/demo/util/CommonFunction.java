@@ -217,7 +217,7 @@ public class CommonFunction {
             public void onRationaleRequested(Permiso.IOnRationaleProvided callback, String... permissions) {
                 Permiso.getInstance().showRationaleInDialog("Permission", "Please give permission to access stogare", "OK", callback);
             }
-        }, Manifest.permission.READ_EXTERNAL_STORAGE);
+        }, Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION);
     }
 
     public static void openGallery(Activity activity) {
@@ -324,8 +324,6 @@ public class CommonFunction {
         alertDialog.setCanceledOnTouchOutside(false);
         alertDialog.show();
     }
-
-
 
 
     public static void appPermissionSetting(Activity activity) {
@@ -508,37 +506,6 @@ public class CommonFunction {
             imageView.setImageResource(placeHolder);
         } else {
             Picasso.with(getContext()).load(url).placeholder(placeHolder).into(imageView);
-
-            /*final ObjectAnimator scaleX=ObjectAnimator.ofFloat(imageView,"scaleX",2.0f,1.0f);
-            scaleX.setDuration(500);
-            scaleX.setInterpolator(new AccelerateDecelerateInterpolator());
-
-            final ObjectAnimator scaleY=ObjectAnimator.ofFloat(imageView,"scaleY",2.0f,1.0f);
-            scaleY.setDuration(500);
-            scaleY.setInterpolator(new AccelerateDecelerateInterpolator());
-
-            final AnimatorSet set=new AnimatorSet();
-            set.playTogether(scaleX,scaleY);
-            Picasso.with(MyApplication.getContext()).load(url).into(new Target() {
-                @Override
-                public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-                    imageView.setImageBitmap(bitmap);
-
-                    if (from.equals(Picasso.LoadedFrom.NETWORK)){
-                        set.start();
-                    }
-                }
-
-                @Override
-                public void onBitmapFailed(Drawable errorDrawable) {
-
-                }
-
-                @Override
-                public void onPrepareLoad(Drawable placeHolderDrawable) {
-
-                }
-            });*/
         }
     }
 

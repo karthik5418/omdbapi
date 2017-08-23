@@ -43,4 +43,31 @@ public class Constants {
     public static final String IMAGE = "IMAGE";
     public static Bitmap IMAGE_BITMAP = null;
 
+
+    // GooglePlayService
+    public static final int REQUEST_GOOGLE_PLAY_SERVICE = 555;
+    public static int PLAY_SERVICE_CODE = 0;
+    public static final int REQUEST_LOCATION_ENABLED_CHECK = 666;
+    public static String LOCATION = "location";
+
+    // GooglePlaceApi key
+    public static String GOOGLE_MAP_SERVER_KEY = "AIzaSyAV4U6jbdkXrpLp1GTf3CFIjZB7A7Q8rQ0";
+
+    // Google Places Link
+    public static final String PLACES_API_BASE = "https://maps.googleapis.com/maps/api/place";
+    public static final String TYPE_AUTOCOMPLETE = "/autocomplete";
+    public static final String OUT_JSON = "/json?";
+    public static final String PLACES_API_ID = "https://maps.googleapis.com/maps/api/place/details/json?placeid=";
+    public static final String PLACES_NEAR_BY = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=";
+    public static final String PLACES_RADIUS = "&radius=50000";
+    public static final String PLACES_SENSOR = "&sensor=true";
+    public static final String PLACES_LOCATION = "&location=";
+    public static final String PLACES_TYPES = "&types=art_gallery|bakery|bar|cafe|food|park|restaurant|shopping_mall|university|hospital";
+    public static final String PLACES_KEY = "&key=" + GOOGLE_MAP_SERVER_KEY;
+    public static final String INPUT_TYPE = "&input=";
+    public static final String RANK_BY = "&rankBy=distance";
+    public static final String RESTRICT = "&strictbounds";
+    public static final String GEOCODING = "http://maps.google.com/maps/api/geocode/json?sensor=false&address=";
+
+
 }

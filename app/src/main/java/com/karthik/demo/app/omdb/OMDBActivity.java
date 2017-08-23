@@ -48,9 +48,10 @@ public class OMDBActivity extends AppCompatActivity implements OMDB_MVP.View, Vi
     private RecyclerView rvOmdb;
     private View inLoader;
     private View inError;
+    private TextView tvTitle;
     private Dialog dialog;
     private ImageView ivBack;
-    private TextView tvTitle;
+
     private Spinner spinnerType;
     private ImageView ivSearch;
     private ImageView ivCancel;
