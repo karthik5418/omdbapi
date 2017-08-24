@@ -10,6 +10,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -43,6 +44,7 @@ import com.karthik.demo.util.ErrorUtil;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -85,6 +87,8 @@ public class LocationActivity extends AppCompatActivity implements Location_MVP.
     private List<Result> list;
     private Result model;
 
+    private boolean isSpinnerTouched = false;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -126,9 +130,65 @@ public class LocationActivity extends AppCompatActivity implements Location_MVP.
         // Drop down layout style - list view with radio button
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerType.setAdapter(dataAdapter);
+
+        spinnerType.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                isSpinnerTouched = true;
+                return false;
+            }
+        });
+
+
         spinnerType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+
+                if (isSpinnerTouched) {
+                    if (position == 0) {
+
+                        Collections.sort(list, new Comparator<Result>() {
+                            @Override
+                            public int compare(Result o1, Result o2) {
+                                Double distance1 = Double.valueOf(o1.getDistance());
+                                Double distance2 = Double.valueOf(o2.getDistance());
+                                if (distance1.compareTo(distance2) < 0) {
+                                    return -1;
+                                } else if (distance1.compareTo(distance2) > 0) {
+                                    return 1;
+                                } else {
+                                    return 0;
+                                }
+
+                            }
+                        });
+
+                    } else {
+
+
+                        Collections.sort(list, new Comparator<Result>() {
+                            @Override
+                            public int compare(Result o1, Result o2) {
+                                Double rating1 = Double.valueOf(o1.getRating());
+                                Double rating2 = Double.valueOf(o2.getRating());
+                                if (rating1.compareTo(rating2) < 0) {
+                                    return -1;
+                                } else if (rating1.compareTo(rating2) > 0) {
+                                    return 1;
+                                } else {
+                                    return 0;
+                                }
+
+                            }
+                        });
+
+                    }
+
+                    isSpinnerTouched = false;
+                    adapter.notifyDataSetChanged();
+                }
+
 
             }
 
@@ -328,6 +388,14 @@ public class LocationActivity extends AppCompatActivity implements Location_MVP.
     public void showSuccess(Object object) {
 
         list = (List<Result>) object;
+
+
+        for (int i = 0; i < list.size(); i++) {
+
+            String distance = CommonFunction.getDistance(mLatitude, mLongitude, list.get(i).getGeometry().getLocation().getLat(), list.get(i).getGeometry().getLocation().getLng());
+
+            list.get(i).setDistance(distance);
+        }
 
         adapter = new LocationAdapter(this, list, MyApp.getDeviceHeight());
         rvNearByPlaces.setAdapter(adapter);

@@ -35,6 +35,8 @@ public class Result {
     @SerializedName("vicinity")
     private String mVicinity;
 
+    private String distance;
+
     public Geometry getGeometry() {
         return mGeometry;
     }
@@ -137,6 +139,14 @@ public class Result {
 
     public void setVicinity(String vicinity) {
         mVicinity = vicinity;
+    }
+
+    public String getDistance() {
+        return distance;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
     }
 
 }

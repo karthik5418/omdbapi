@@ -62,7 +62,8 @@ public class Constants {
     public static final String PLACES_RADIUS = "&radius=50000";
     public static final String PLACES_SENSOR = "&sensor=true";
     public static final String PLACES_LOCATION = "&location=";
-    public static final String PLACES_TYPES = "&types=art_gallery|bakery|bar|cafe|food|park|restaurant|shopping_mall|university|hospital";
+    //public static final String PLACES_TYPES = "&types=art_gallery|bakery|bar|cafe|food|park|restaurant|shopping_mall|university|hospital";
+    public static final String PLACES_TYPES = "&types=restaurant";
     public static final String PLACES_KEY = "&key=" + GOOGLE_MAP_SERVER_KEY;
     public static final String INPUT_TYPE = "&input=";
     public static final String RANK_BY = "&rankBy=distance";

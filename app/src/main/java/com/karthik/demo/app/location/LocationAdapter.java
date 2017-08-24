@@ -56,6 +56,7 @@ public class LocationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         CommonFunction.getImage("https://maps.googleapis.com/maps/api/place/photo?maxwidth=" + model.getPhotos().get(0).getWidth() + "&photoreference=" + model.getPhotos().get(0).getPhotoReference() + "&key=" + Constants.GOOGLE_MAP_SERVER_KEY, viewHolder.ivMoviePoster, R.drawable.im_post_default);
         viewHolder.tvMovieTitle.setText(model.getName());
         viewHolder.tvRating.setText("Rating : " + model.getRating());
+        viewHolder.tvDistance.setText("Distance : " + model.getDistance()+ " km");
 
 
     }
@@ -75,6 +76,7 @@ public class LocationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         private TextView tvReleaseDate;
         private TextView tvPolt;
         private TextView tvRating;
+        private TextView tvDistance;
 
         public LocationViewHolder(View itemView) {
             super(itemView);
@@ -84,6 +86,7 @@ public class LocationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             tvGenre = (TextView) itemView.findViewById(R.id.tv_genre);
             tvReleaseDate = (TextView) itemView.findViewById(R.id.tv_release_date);
             tvPolt = (TextView) itemView.findViewById(R.id.tv_plot);
+            tvDistance = (TextView) itemView.findViewById(R.id.tv_distance);
             tvRating = (TextView) itemView.findViewById(R.id.tv_rating);
             cardView.setOnClickListener(this);
 

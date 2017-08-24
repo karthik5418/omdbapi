@@ -56,7 +56,7 @@
                     android:typeface="normal" />
 
                 <com.karthik.demo.view.TextViewCustom
-                    android:id="@+id/tv_genre"
+                    android:id="@+id/tv_distance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_movie_title"
@@ -66,7 +66,7 @@
                     android:textSize="@dimen/text_medium"
                     android:textStyle="normal"
                     android:typeface="normal"
-                    android:visibility="gone" />
+                    android:visibility="visible" />
 
                 <com.karthik.demo.view.TextViewCustom
                     android:id="@+id/tv_rating"
@@ -85,7 +85,7 @@
                     android:id="@+id/tv_release_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_genre"
+                    android:layout_below="@+id/tv_distance"
                     android:layout_marginRight="5dp"
                     android:padding="2dp"
                     android:text="Genre"
