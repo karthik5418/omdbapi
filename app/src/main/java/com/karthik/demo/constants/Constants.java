@@ -51,7 +51,7 @@ public class Constants {
     public static String LOCATION = "location";
 
     // GooglePlaceApi key
-    public static String GOOGLE_MAP_SERVER_KEY = "AIzaSyAV4U6jbdkXrpLp1GTf3CFIjZB7A7Q8rQ0";
+    public static String GOOGLE_MAP_SERVER_KEY = "AIzaSyBjUjzOr5wbp6Mqu7C2Ck-QwOpeKJrYZcI";
 
     // Google Places Link
     public static final String PLACES_API_BASE = "https://maps.googleapis.com/maps/api/place";
